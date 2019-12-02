@@ -1,0 +1,46 @@
+extends template/main
+
+block variables
+	- var title = 'Тестовые задания smargelov'
+
+block content
+	section.test-block.test-block--blue
+		h2.h2.test-block__title Задание #1
+		h3.h3.test-block__subtitle Реализовать оценку и показ рейтинга.
+		.rating.test-block__content
+			.rating__graph
+				.rating__stars
+					each star in [,,,,,]
+						.rating__star
+							+icon('star-e', 'rating__icon')
+				.rating__num 
+			.rating__user
+				| Ваша оценка: 
+				span.rating__user-num 
+	section.test-block.test-block--grey
+		h2.h2.test-block__title Задание #2
+		h3.h3.test-block__subtitle Сверстать прогресс-бар.
+		.progress-bar.test-block__content
+			.progress-bar__wrap 
+				.progress-bar__percentage.progress-bar__percentage--in 1%
+				.progress-bar__line
+					.progress-bar__percentage.progress-bar__percentage--out 1%
+			.progress-bar__footer
+				select.progress-bar__select
+					each option in ['8', '16', '32', '64']
+						option= option
+				btn.progress-bar__btn.btn go
+	section.test-block.test-block--light-blue
+		h2.h2.test-block__title Задание #4
+		h3.h3.test-block__subtitle PHP. Реализовать поиск видео с youtube.
+		.video.test-block__content
+			form.video__search
+				input(type="text").video__text-input
+				input(type="submit", value="Search video").video__submit.btn 
+			.video__result
+				
+				
+
+					
+			
+

@@ -1,0 +1,28 @@
+.rating
+	display: flex
+	flex-direction: column
+	align-items: center
+	&__graph
+		display: flex
+		align-items: center
+	&__stars
+		display: flex
+		margin-right: 1.5rem
+		padding: 10px
+		cursor: pointer
+	&__star
+		&:not(:last-child)
+			// margin-right: 0.5rem
+	&__icon
+		fill: none
+		stroke: $yellow
+		width: 50px
+		height: 50px
+	&__num
+		font-size: 42px
+		color: $yellow
+	&__user
+		font-size: 1.125rem
+		margin-top: 0.5rem
+		color: $grey
+		display: none
