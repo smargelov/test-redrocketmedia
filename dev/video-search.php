@@ -28,7 +28,7 @@ $limit = 5;
 $apikey = "AIzaSyCl1-pOpbV8KeLkCxi8Ouh6FNKprmzNSSM"; 
 $res_json = youtube_search($apikey, $search, $limit) ;
 $res = json_decode( $res_json );
-$videos = [];
+$videos = array();
 
 
 function get_one_level_array ($arr)	{
@@ -56,7 +56,7 @@ function objectToArray($d) {
 $result = objectToArray(get_one_level_array($res));
 
 foreach ($result['items'] as $key => $value) {
-	$video = [];
+	$video = array();
 	$video['service'] = 'yt';
 	$video['id'] = $value['id']['videoId'];
 	$video['title'] = $value['snippet']['title'];
