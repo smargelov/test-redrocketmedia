@@ -4,8 +4,9 @@
 	flex-direction: column
 	&__search
 		align-self: center
-		width: 50%
+		max-width: 100%
 		display: flex
+		flex-wrap: wrap
 	&__text-input
 		margin-right: 8px
 		flex-grow: 1
@@ -19,9 +20,14 @@
 	&__result
 		display: flex
 		justify-content: space-between
+		flex-direction: column
+		align-items: center
 		margin-top: 16px
 	&__card
-		width: 19%
+		width: 90%
+		max-width: 500px
+		&:not(:last-child)
+			margin-bottom: 32px
 	&__frame
 		position: relative
 		padding-top: 56.25%
